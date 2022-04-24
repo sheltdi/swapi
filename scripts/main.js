@@ -1,6 +1,6 @@
 const peopleList = document.querySelector(".list-people");
 const peopleBtn = document.querySelector(".people-button");
-
+const peopleSection = document.querySelector(".people")
 const people = new People();
 
 let displayData = function() {

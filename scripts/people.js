@@ -13,7 +13,8 @@ class People {
   }
   displayPeople() {
     this.currentPage.results.map(result => {
-    peopleList.innerHTML+= `<li>${result.name}</li>`
+    peopleList.innerHTML+= `<li class="character">${result.name}</li>`
+    peopleSection.style.display = "block";
     })
   }
 } 
