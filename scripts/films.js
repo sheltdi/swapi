@@ -1,4 +1,4 @@
-class People {
+class Films {
   constructor() {
     this.url = "https://swapi.dev/api/people";
     this.currentPage;
@@ -8,12 +8,7 @@ class People {
     .then(res => res.json())
     .then(res => {
       this.currentPage = res;
-      this.displayPeople()
+      return this.currentPage;
     })
   }
-  displayPeople() {
-    this.currentPage.results.map(result => {
-    peopleList.innerHTML+= `<li>${result.name}</li>`
-    })
-  }
-} 
+}

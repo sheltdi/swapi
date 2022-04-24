@@ -1,18 +1,10 @@
-const tester = document.querySelector(".test");
-let results;
-tester.innerText = "other Test";
+const peopleList = document.querySelector(".list-people");
+const peopleBtn = document.querySelector(".people-button");
 
-  async function fetchData(url) {
-    await fetch(url)
-    .then(res => res.json())
-    .then(res => {
-      results = res;
-      // displayResults();
-      return tester;
-    })
-  }
-  // fetchData("https://swapi.dev/api/people");
+const people = new People();
 
-function displayResults() {
-  tester.innerText = results.results[0].name;
+let displayData = function() {
+  people.fetchData();
 }
+
+peopleBtn.addEventListener("click", displayData)

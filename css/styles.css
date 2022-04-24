@@ -17,3 +17,10 @@ button {
   background-color: grey;
   color: yellow;
 }
+
+.films {
+  display: none;
+}
+.people {
+  /* display: none; */
+}
