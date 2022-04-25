@@ -15,7 +15,6 @@ class People {
     this.currentPage.results.map(result => {
     peopleList.innerHTML+= `<li class="character">${result.name}</li>`
     peopleSection.style.display = "block";
-    // peopleSection.style.listStyle = "none";
     })
   }
 } 

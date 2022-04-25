@@ -24,3 +24,7 @@ button {
 .people  {
   display: none;
 }
+.direction-button {
+  height: 50px;
+  width: 50px;
+}
