@@ -1,6 +1,6 @@
 class Films {
   constructor() {
-    this.url = "https://swapi.dev/api/people";
+    this.url = "https://swapi.dev/api/films";
     this.currentPage;
   }
   async fetchData() {
@@ -8,7 +8,13 @@ class Films {
     .then(res => res.json())
     .then(res => {
       this.currentPage = res;
-      return this.currentPage;
+      this.displayFilms();
+    })
+  }
+  displayFilms() {
+    this.currentPage.results.map(result => {
+    filmList.innerHTML+= `<li class="movie">${result.title}</li>`
+    filmSection.style.display = "block";
     })
   }
 }
